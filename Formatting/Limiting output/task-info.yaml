@@ -11,7 +11,7 @@ files:
       offset: 748
     initialized_from_dependency: false
     possible_answer: truncate(big_list, 30)
-    selected: false
+    selected: true
     status: Solved
   text: |
     import logging

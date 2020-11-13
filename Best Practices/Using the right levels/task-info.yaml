@@ -11,7 +11,7 @@ files:
       offset: 214
     initialized_from_dependency: false
     possible_answer: INFO
-    selected: false
+    selected: true
     status: Unchecked
   - offset: 300
     length: 16
@@ -114,4 +114,7 @@ files:
 
   learner_created: false
 status: Unchecked
+feedback:
+  message: No Python interpreter
+  time: Wed, 02 Sep 2020 07:36:21 UTC
 record: -1

@@ -1,5 +1,31 @@
 type: edu
 files:
+- name: tests.py
+  visible: false
+  text: |+
+    from test_helper import run_common_tests, failed, passed, get_answer_placeholders
+
+
+    def test_answer_placeholders():
+        placeholders = get_answer_placeholders()
+        placeholder = placeholders[0]
+        if placeholder == ".first_class":
+            passed()
+        else:
+            failed()
+
+        placeholder = placeholders[1]
+        if placeholder == "first_logger.setLevel(logging.DEBUG)":
+            passed()
+        else:
+            failed()
+
+    if __name__ == '__main__':
+        run_common_tests()
+        test_answer_placeholders()
+
+
+  learner_created: false
 - name: private_logger.py
   visible: true
   placeholders:
@@ -11,7 +37,7 @@ files:
       offset: 726
     initialized_from_dependency: false
     possible_answer: .first_class
-    selected: false
+    selected: true
     status: Unchecked
   - offset: 765
     length: 30
@@ -21,7 +47,7 @@ files:
       offset: 765
     initialized_from_dependency: false
     possible_answer: first_logger.setLevel(logging.DEBUG)
-    selected: false
+    selected: true
     status: Unchecked
   text: |+
     import logging
@@ -61,31 +87,8 @@ files:
 
 
   learner_created: false
-- name: tests.py
-  visible: false
-  text: |+
-    from test_helper import run_common_tests, failed, passed, get_answer_placeholders
-
-
-    def test_answer_placeholders():
-        placeholders = get_answer_placeholders()
-        placeholder = placeholders[0]
-        if placeholder == ".first_class":
-            passed()
-        else:
-            failed()
-
-        placeholder = placeholders[1]
-        if placeholder == "first_logger.setLevel(logging.DEBUG)":
-            passed()
-        else:
-            failed()
-
-    if __name__ == '__main__':
-        run_common_tests()
-        test_answer_placeholders()
-
-
-  learner_created: false
 status: Unchecked
+feedback:
+  message: No Python interpreter
+  time: Wed, 02 Sep 2020 07:19:41 UTC
 record: -1

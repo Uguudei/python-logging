@@ -50,4 +50,7 @@ files:
 
   learner_created: false
 status: Unchecked
+feedback:
+  message: No Python interpreter
+  time: Wed, 02 Sep 2020 07:41:42 UTC
 record: -1

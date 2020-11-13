@@ -1,26 +1,5 @@
 type: edu
 files:
-- name: tests.py
-  visible: false
-  text: |+
-    from test_helper import run_common_tests, failed, passed, get_answer_placeholders
-
-
-    def test_answer_placeholders():
-        placeholders = get_answer_placeholders()
-        placeholder = placeholders[0].replace('"', "'")
-        if placeholder == "'mortgage.rate'":
-            passed()
-        else:
-            failed()
-
-
-    if __name__ == '__main__':
-        run_common_tests()
-        test_answer_placeholders()
-
-
-  learner_created: false
 - name: selective_logging.py
   visible: true
   placeholders:
@@ -80,6 +59,27 @@ files:
         rate_logger.setLevel(specify this loggers severity level)
         payment = get_monthly_payment(100000, 30)
         print('Monthly payment is %f' % payment)
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |+
+    from test_helper import run_common_tests, failed, passed, get_answer_placeholders
+
+
+    def test_answer_placeholders():
+        placeholders = get_answer_placeholders()
+        placeholder = placeholders[0].replace('"', "'")
+        if placeholder == "'mortgage.rate'":
+            passed()
+        else:
+            failed()
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        test_answer_placeholders()
+
+
   learner_created: false
 status: Solved
 record: -1

@@ -1,26 +1,5 @@
 type: edu
 files:
-- name: tests.py
-  visible: false
-  text: |+
-    from test_helper import run_common_tests, failed, passed, get_answer_placeholders
-
-
-    def test_answer_placeholders():
-        placeholders = get_answer_placeholders()
-        placeholder = placeholders[0]
-        if placeholder == "%(asctime)s %(levelname)s %(module)s %(funcName)s %(message)s":
-            passed()
-        else:
-            failed('Sorry, that is not correct. Check the Hint for the correct answer.')
-
-
-    if __name__ == '__main__':
-        run_common_tests()
-        test_answer_placeholders()
-
-
-  learner_created: false
 - name: log_attributes.py
   visible: true
   placeholders:
@@ -67,6 +46,27 @@ files:
                             format='insert_format_string_here')
         payment = get_monthly_payment(100000, 80)
         print('Monthly payment is %f' % payment)
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |+
+    from test_helper import run_common_tests, failed, passed, get_answer_placeholders
+
+
+    def test_answer_placeholders():
+        placeholders = get_answer_placeholders()
+        placeholder = placeholders[0]
+        if placeholder == "%(asctime)s %(levelname)s %(module)s %(funcName)s %(message)s":
+            passed()
+        else:
+            failed('Sorry, that is not correct. Check the Hint for the correct answer.')
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        test_answer_placeholders()
+
+
   learner_created: false
 status: Solved
 record: -1

@@ -20,7 +20,7 @@ files:
       length: 60
       offset: 309
     initialized_from_dependency: false
-    possible_answer: "true"
+    possible_answer: "True"
     selected: false
     status: Unchecked
   text: |+

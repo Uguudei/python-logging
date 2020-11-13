@@ -1,5 +1,26 @@
 type: edu
 files:
+- name: tests.py
+  visible: false
+  text: |+
+    from test_helper import run_common_tests, failed, passed, get_answer_placeholders, check_answers
+
+
+    def test_answer_placeholders():
+        placeholders = get_answer_placeholders()
+        answers = [
+            ['logging.FileHandler(log_filename)', 'logging.FileHandler(filename=log_filename)'],
+            ['addHandler']
+        ]
+        check_answers(placeholders, answers)
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        test_answer_placeholders()
+
+
+  learner_created: false
 - name: file_handler.py
   visible: true
   placeholders:
@@ -65,27 +86,6 @@ files:
 
         payment = get_monthly_payment(100000, 80)
         print('Monthly payment is %f' % payment)
-  learner_created: false
-- name: tests.py
-  visible: false
-  text: |+
-    from test_helper import run_common_tests, failed, passed, get_answer_placeholders, check_answers
-
-
-    def test_answer_placeholders():
-        placeholders = get_answer_placeholders()
-        answers = [
-            ['logging.FileHandler(log_filename)', 'logging.FileHandler(filename=log_filename)'],
-            ['addHandler']
-        ]
-        check_answers(placeholders, answers)
-
-
-    if __name__ == '__main__':
-        run_common_tests()
-        test_answer_placeholders()
-
-
   learner_created: false
 status: Unchecked
 record: -1

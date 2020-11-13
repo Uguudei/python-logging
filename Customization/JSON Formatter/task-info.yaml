@@ -11,7 +11,7 @@ files:
       offset: 760
     initialized_from_dependency: false
     possible_answer: handler.setFormatter(fmt)
-    selected: false
+    selected: true
     status: Unchecked
   text: |+
     import logging

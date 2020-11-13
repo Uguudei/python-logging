@@ -11,7 +11,7 @@ files:
       offset: 651
     initialized_from_dependency: false
     possible_answer: disable_existing_loggers
-    selected: false
+    selected: true
     status: Unchecked
   - offset: 675
     length: 19
@@ -20,7 +20,7 @@ files:
       length: 19
       offset: 675
     initialized_from_dependency: false
-    possible_answer: "false"
+    possible_answer: "False"
     selected: false
     status: Unchecked
   text: |

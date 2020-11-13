@@ -11,7 +11,7 @@ files:
       offset: 122
     initialized_from_dependency: false
     possible_answer: root
-    selected: false
+    selected: true
     status: Unchecked
   - offset: 301
     length: 34

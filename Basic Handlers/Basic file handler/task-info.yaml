@@ -1,5 +1,26 @@
 type: edu
 files:
+- name: tests.py
+  visible: false
+  text: |+
+    from test_helper import run_common_tests, failed, passed, get_answer_placeholders
+
+
+    def test_answer_placeholders():
+        placeholders = get_answer_placeholders()
+        placeholder = placeholders[0].replace('"', "'")
+        if placeholder == "filename=log_filename":
+            passed()
+        else:
+            failed()
+
+
+    if __name__ == '__main__':
+        run_common_tests()
+        test_answer_placeholders()
+
+
+  learner_created: false
 - name: basic_file_handler.py
   visible: true
   placeholders:
@@ -11,7 +32,7 @@ files:
       offset: 1032
     initialized_from_dependency: false
     possible_answer: filename=log_filename
-    selected: false
+    selected: true
     status: Unchecked
   text: |
     from __future__ import print_function
@@ -49,26 +70,8 @@ files:
         payment = get_monthly_payment(100000, 80)
         print('Monthly payment is %f' % payment)
   learner_created: false
-- name: tests.py
-  visible: false
-  text: |+
-    from test_helper import run_common_tests, failed, passed, get_answer_placeholders
-
-
-    def test_answer_placeholders():
-        placeholders = get_answer_placeholders()
-        placeholder = placeholders[0].replace('"', "'")
-        if placeholder == "filename=log_filename":
-            passed()
-        else:
-            failed()
-
-
-    if __name__ == '__main__':
-        run_common_tests()
-        test_answer_placeholders()
-
-
-  learner_created: false
 status: Unchecked
+feedback:
+  message: No Python interpreter
+  time: Wed, 02 Sep 2020 06:47:31 UTC
 record: -1

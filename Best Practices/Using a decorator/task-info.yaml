@@ -11,7 +11,7 @@ files:
       offset: 354
     initialized_from_dependency: false
     possible_answer: '@logging_decorator'
-    selected: false
+    selected: true
     status: Unchecked
   - offset: 528
     length: 61
@@ -76,4 +76,7 @@ files:
 
   learner_created: false
 status: Unchecked
+feedback:
+  message: No Python interpreter
+  time: Wed, 02 Sep 2020 07:40:20 UTC
 record: -1
